@@ -20,8 +20,14 @@ console.log(replace2('aaa@bbb@ccc'));
 
 console.log('Задание 2');
 let date2 = '2025-12-31';
-let rez = date2.split('-').reverse().join('/');
-console.log(rez);
+//let rez = date2.split('-').reverse().join('/');
+const regDate = /(\d{4})-(\d{2})-(\d{2})/g;
+date2 = date2.replace(regDate, '$3/$2/$1'); 
+console.log(date2);
+//$3 - знак $ - это как бы обращение к 3 группе
+
+
+
 
 console.log('Задание 3');
 function getWords1(str) {

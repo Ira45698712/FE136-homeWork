@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(154, 151, 151);
+}
+.header{
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #cd00cd;
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+.todo__items{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 72%;
+    list-style: none;
+    margin-left: 0;
+    border: solid grey 2px;
+    padding: 10px;
+    font-size: 18px;
+}
+.done{
+    text-decoration: line-through;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form input{
+    margin-top: 15px;
+    padding: 10px 0;
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #cd00cd;
+    margin-left: 0;
+    
+}
+.btn_delete{
+    
+    width: 72%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #cd00cd;
+    padding: 10px 0;
+    font-size: 22px;
+}

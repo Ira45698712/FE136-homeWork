@@ -1,10 +1,11 @@
 class User{
     constructor(data){
-        this.id = data.id;
-        this.name = data.name;
-        this.email = data.email;
-        this.address = data.address;
-        this.phone = data.phone;
+        // this.id = data.id;
+        // this.name = data.name;
+        // this.email = data.email;
+        // this.address = data.address;
+        // this.phone = data.phone;
+        this.data = data
     }
     get info(){
         return this.name + ' (' + this.email + ' - ' + this.address + ' - ' + this.phone + ')' 
@@ -14,9 +15,8 @@ class User{
       }
 }
 
-class Contacts extends User{
-    constructor(data){
-        super(data);
+class Contacts {
+    constructor(){
         this.users = [];
         this.id = 0;
     }
@@ -95,7 +95,7 @@ class ContactApp extends Contacts{
             name.innerText = user.data.name;
             const email = document.createElement('p');
             email.classList.add('user__eamil');
-            email.innerText = email.data.name;
+            email.innerText = user.data.email;
             const address = document.createElement('p');
             address.classList.add('user__address');
             address.innerText = user.data.address;
@@ -114,15 +114,19 @@ class ContactApp extends Contacts{
                 this.remove(user.data.id);
                 this.render();
             });
+
+
+            item.append(id, name, email, address, phone);
+            this.contactsContainer.append(item);
     
         }
     )}
 }
 
-let fill = new User({id: 1, name: 'Fill', email: 'fill@gmail.com', address: 'repina-1/45', phone: '+375222222333'});
-console.log(fill);
-console.log(fill.info);
-const users = new Contact();
+// let fill = new User({id: 1, name: 'Fill', email: 'fill@gmail.com', address: 'repina-1/45', phone: '+375222222333'});
+// console.log(fill);
+// console.log(fill.info);
+const users = new Contacts();
 
 users.add({id: '1', name: 'Fill', email: 'fill@gmail.com', address: 'repina-1/45', phone: '+375222222333'});
 users.add({id: '2', name: 'Bob', email: 'fill@gmail.com', address: 'repina-1/45', phone: '+375222222333'});
